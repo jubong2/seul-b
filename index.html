@@ -4,7 +4,7 @@
     <!-- 구글 애널리틱스  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>슬기로운 빵생활</title>
+    <title>슬기로운 빵생활 B안</title>
     <!-- SEO적용 -->
     <meta name="description" content="전국 빵순이 빵순이들 모여라!! 전국 빵맛집을 한번에! " />
     <meta name="keywords" content="빵맛집, 전국빵맛집, 빵지순례, 빵투어, 빵맛있는곳, 디저트, 디저트추천, 빵추천, 베이커리, 빵택배 , 빵택배배송" />
@@ -61,7 +61,7 @@
   </head>
   <body>
     <!-- 헤더 -->
-    <!-- <div class="mb-header-warp">
+    <div class="mb-header-warp">
       <div class="mb-header-top-icon">
         <div>
           <a href="#"><img src="images/login-w.png" alt="로그인" /></a>
@@ -72,6 +72,7 @@
         <div>
           <a href="#"><img src="images/cart-w.png" alt="로그인" /></a>
         </div>
+        <div class="closed"><img src="images/closed.png" alt="닫기" /></div>
       </div>
       <div class="mb-search">
         <div class="search-inner">
@@ -105,7 +106,7 @@
           <li class="mb-header-navi-kind"><a href="#">C/S</a></li>
         </ul>
       </div>
-    </div> -->
+    </div>
     <div class="warp">
       <section class="header">
         <div class="header-top">
@@ -222,7 +223,7 @@
             <div class="best5-title">이번주 베스트 TOP 5</div>
             <div class="best5-product-warp">
               <div class="best5-button">
-                <a href="#"><h3>gift</h3></a>
+                <a href="#"><h3>Gift</h3></a>
                 <a href="#"><h3>vegan</h3></a>
                 <a href="#"><h3>Dessert</h3></a>
                 <a href="#"><h3>Meal</h3></a>
@@ -647,71 +648,45 @@
         </div>
       </section>
 
-      <!-- 팝업 스토어 -->
-      <section class="popup-store">
-        <div class="popup-inner">
-          <div class="popup-title">
-            <h4>웨이팅 없이 만날 수 있는 유명빵집</h4>
-            <h2>3일씩 릴레이 팝업 진행!</h2>
-          </div>
-          <div class="popup-count">
-            <p>1차 팝업 종료시까지 <br /><span id="timer">00:00:00</span></p>
-          </div>
-          <div class="popup-img-intro">
-            <!-- 왼쪽: 희와제과 -->
-            <div class="left">
-              <div class="first-store">
-                <img src="images/popup1.png" alt="희와제과" />
-                <div class="popup1-title">
-                  <h2>1차</h2>
-                  <p>11월 4일, 오전 11시 ~ <br />11월 6일, 오전 11시</p>
-                </div>
-                <h3>희와제과</h3>
-                <div class="popup1-title-hover">
-                  <ul>
-                    <h4>예상 발송 일정</h4>
-                    <li>1일차 주문 : 11월 6일 순차발송</li>
-                    <li>2일차 주문 : 11월 7일 순차발송</li>
-                    <li>3일차 주문 : 11월 8일 순차발송</li>
-                  </ul>
-                </div>
+      <!--특가 타임세일-->
+      <section class="time-sale">
+        <div class="time-sale-inner">
+          <div class="sale-products">
+            <div class="sale-top">
+             <div class="sale-top-left">
+              <h2>식사빵 일일특가</h2>
+              <h3>단 24시간 한정 타임 특가 !</h3>
+              <div class="sale-count">
+                <p>⏰<span id="timer">00:00:00</span></p>
               </div>
+             </div>
+             <div class="sale-top-right">
+              <img src="images/sale-top.JPG" alt="">
+              <button>담기</button>
+              <div class="sale-top-right-intro">
+                <p>오늘 단 하루 초특가! 든든하고 고소한 식사빵의 정석</p>
+                <h4>[프렌떼] 장발장빵(호밀 깜빠뉴) 3종(택1)</h4>
+                <h5><b>20%</b> 4,968원~ <span>6,210원</span></h5>
+              </div>
+             </div>
             </div>
-
-            <!-- 오른쪽: 크리미, 소베 세로 정렬 -->
-            <div class="right">
-              <div class="second-store">
-                <img src="images/popup2.png" alt="크리미" />
-                <div class="popup2-title">
-                  <h2>2차</h2>
-                  <p>11월 7일, 오전 11시 ~ <br />11월 9일, 오전 11시</p>
-                </div>
-                <h3>크리미</h3>
-                <div class="popup1-title-hover">
-                  <ul>
-                    <h4>예상 발송 일정</h4>
-                    <li>1일차 주문 : 11월 9일 순차발송</li>
-                    <li>2일차 주문 : 11월 10일 순차발송</li>
-                    <li>3일차 주문 : 11월 11일 순차발송</li>
-                  </ul>
-                </div>
+            <div class="sale-top">
+             <div class="sale-top-left">
+              <h2>최저가 도전</h2>
+              <h3>놓치면 안되는 기회 !</h3>
+              <div class="sale-count">
+                <p>⏰<span id="timer">00:00:00</span></p>
               </div>
-              <div class="third-store">
-                <img src="images/popup3.png" alt="소베" />
-                <div class="popup3-title">
-                  <h2>3차</h2>
-                  <p>11월 9일, 오전 11시 ~ <br />11월 11일, 오전 11시</p>
-                </div>
-                <h3>소베</h3>
-                <div class="popup1-title-hover">
-                  <ul>
-                    <h4>예상 발송 일정</h4>
-                    <li>1일차 주문 : 11월 11일 순차발송</li>
-                    <li>2일차 주문 : 11월 12일 순차발송</li>
-                    <li>3일차 주문 : 11월 13일 순차발송</li>
-                  </ul>
-                </div>
+             </div>
+             <div class="sale-top-right">
+              <img src="images/sale-bottom.JPG" alt="">
+              <button>담기</button>
+              <div class="sale-top-right-intro">
+                <p>가장 핫한 도넛 ! 올드페리를 집에서 즐겨보세요 ~</p>
+                <h4>[올드페리] 시그니처 4종 세트</h4>
+                <h5><b>50%</b> 19,000원~ <span>9,500원</span></h5>
               </div>
+             </div>
             </div>
           </div>
         </div>

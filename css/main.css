@@ -3,7 +3,7 @@
 @import url("header.css");
 @import url("banner.css");
 @import url("best5.css");
-@import url("popup-store.css");
+@import url("time-sale.css");
 @import url("mini-banner.css");
 @import url("swiper.css");
 @import url("community.css");
@@ -31,7 +31,7 @@ body {
   background-color: #fff6e5;
   color: #855333;
   width: 100%;
-  font-family: "Arimo", sans-serif;
+  font-family: "Gapyeong Wave", sans-serif;
 }
 img {
   vertical-align: middle;
