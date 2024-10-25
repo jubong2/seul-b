@@ -34,6 +34,7 @@
 .sale-top-right > img{
   width: 100%;
   border-radius: 5px;
+  cursor: pointer;
 }
 .sale-top-right > button{
   width: 100%;
@@ -43,9 +44,12 @@
   border-radius: 5px;
   margin-top: 10px;
   color: #855333;
+  font-weight: 600;
+  cursor: pointer;
 }
 .sale-top-left > h2{
   font-size: 35px;
+  cursor: pointer;
 }
 .sale-top-left > h3{
   font-size: 20px;
@@ -66,10 +70,12 @@
 .sale-top-right-intro > h4{
   font-size: 30px;
   margin-top: 5px;
+  cursor: pointer;
 }
 .sale-top-right-intro > h5{
   margin-top: 10px;
   font-size: 25px;
+  cursor: pointer;
 }
 .sale-top-right-intro > h5 > b{
   color: red;
