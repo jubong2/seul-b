@@ -22,7 +22,7 @@
 }
 
 .swipersection-title > h4 {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   margin: 50px 0;
   width: 80%;
   font-size: 50px;
@@ -57,7 +57,7 @@
 /* 펫 스와이퍼 */
 .pet-swiper {
   width: 100%;
-  background: url("../images/pet-bg.jpg") no-repeat;
+  /* background: url("../images/pet-bg.jpg") no-repeat; */
   background-position: center;
   background-size: 100% auto; /* 가로를 전부 맞추고 세로는 자동 */
   position: relative;
@@ -70,10 +70,44 @@
   width: 70%;
 }
 .pet-text {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 .pet-img {
   position: relative;
+}
+/* =============b안 내용 */
+
+.swipersection-title {
+  margin-bottom: 1%;
+}
+.pet-icon {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 30%;
+}
+.pet-icon > img {
+  width: 100%;
+}
+.pet-icon-mb {
+  display: none;
+}
+.ppang-button {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 30%;
+}
+
+.ppang-button > img {
+  width: 100%;
+}
+.ppang-button-mb {
+  display: none;
 }
 
 /* 반응형 */
@@ -119,6 +153,34 @@
     display: block;
   }
 }
+
+@media (max-width: 600px) {
+  .ppang-button {
+    display: none;
+  }
+  .ppang-button-mb {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    padding-bottom: 10%;
+  }
+  .ppang-button-mb > img {
+    width: 100%;
+  }
+  .pet-icon {
+    display: none;
+  }
+  .pet-icon-mb {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    padding-bottom: 10%;
+  }
+  .pet-icon-mb > img {
+    width: 100%;
+  }
+}
+
 @media (max-width: 500px) {
   .swipersection-title > h4 {
     padding-top: 25px;
