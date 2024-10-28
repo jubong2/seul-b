@@ -14,6 +14,7 @@
   position: relative;
   overflow: hidden;
   padding: 20px 0; /* 배너 위아래 여백 */
+  margin-bottom: 300px;
 }
 
 .miniBn-left,
@@ -27,16 +28,18 @@
   transform: translateX(-150px); /* 왼쪽 배너 초기 위치 */
   transition: all 0.8s ease-in-out;
 }
-.miniBn-left{
+.miniBn-left {
   padding-right: 10%;
 }
 .miniBn-rigth {
   padding-left: 10%;
   transform: translateX(150px); /* 오른쪽 배너 초기 위치 */
+  margin-bottom: 0;
 }
 
 .minibn-img {
   width: 80%;
+  cursor: pointer;
 }
 
 .minibn-img > img {
@@ -48,6 +51,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  cursor: pointer;
 }
 
 .more-btn > div {
@@ -70,9 +74,6 @@
   opacity: 1; /* 보이게 설정 */
   transform: translateX(0); /* 원래 위치로 이동 */
 }
-
-
-
 
 /* 반응형============================================ */
 @media screen and (max-width: 1000px) {
@@ -157,22 +158,20 @@
     font-size: 13px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .miniBn-left {
-    margin-bottom: 30px;
-    padding-right: 2%;
+    margin-bottom: 20px;
+    padding-right: 0%;
   }
   .miniBn-rigth {
-    padding-left: 2%;
+    padding-left: 0%;
+    margin-bottom: 40px;
+  }
+  .minibn-img {
+    width: 100%;
   }
   .more-btn {
-    gap: 5px;
-  }
-  .more-btn > div {
-    width: 5px;
-  }
-  .more-btn > p {
-    font-size: 10px;
+    display: none;
   }
 }
 @media screen and (max-width: 320px) {

@@ -41,6 +41,7 @@ img {
   width: 100%;
   position: relative;
 }
+
 @media (max-width: 1200px) {
   .banner {
     margin-bottom: 200px;
@@ -50,7 +51,7 @@ img {
     margin-bottom: 180px;
   }
 
-  .popup-store {
+  .time-sale {
     margin-bottom: 200px;
   }
 
@@ -58,10 +59,10 @@ img {
     margin-bottom: 200px;
   }
 
-  .target-swiper {
+  .mini-banner {
     margin-bottom: 200px;
   }
-  .mini-banner {
+  .target-swiper {
     margin-bottom: 200px;
   }
 
@@ -82,18 +83,17 @@ img {
     margin-bottom: 120px;
   }
 
-  .popup-store {
+  .time-sale {
     margin-bottom: 150px;
   }
 
   .knotted-banner {
     margin-bottom: 150px;
   }
-
-  .target-swiper {
+  .mini-banner {
     margin-bottom: 150px;
   }
-  .mini-banner {
+  .target-swiper {
     margin-bottom: 150px;
   }
 
@@ -110,21 +110,21 @@ img {
     margin-bottom: 80px;
   }
   .best5 {
-    margin-bottom:60px;
+    margin-bottom: 60px;
   }
 
-  .popup-store {
+  .time-sale {
     margin-bottom: 80px;
   }
 
   .knotted-banner {
     margin-bottom: 80px;
   }
-
-  .target-swiper {
+  .mini-banner {
     margin-bottom: 80px;
   }
-  .mini-banner {
+
+  .target-swiper {
     margin-bottom: 80px;
   }
 

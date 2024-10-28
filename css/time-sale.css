@@ -5,7 +5,7 @@
   display: block;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 100px;
+  margin-bottom: 300px;
 }
 .time-sale-inner {
   position: relative;
@@ -21,9 +21,10 @@
   font-weight: 800;
   color: rgb(255, 0, 0);
 }
-.sale-top {
-  margin-bottom: 200px;
+.sale-products .sale-top:nth-of-type(1) {
+  margin-bottom: 100px;
 }
+
 .sale-top {
   display: flex;
   justify-content: space-between;
@@ -38,21 +39,25 @@
 }
 .sale-top-right > button {
   width: 100%;
+  height: 80px;
   font-size: 20px;
   background-color: #fff;
   border: 1px solid #cfcfcf;
   border-radius: 5px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  margin: 3% 0;
   color: #855333;
   font-weight: 600;
   cursor: pointer;
 }
 
 .sale-top-left > h2 {
+  margin-bottom: 10%;
   font-size: 35px;
   cursor: pointer;
 }
 .sale-top-left > h3 {
+  margin-bottom: 10%;
   font-size: 20px;
   margin-top: 8px;
   color: rgba(133, 83, 51, 0.8);
@@ -65,10 +70,12 @@
   margin-top: 10px;
 }
 .sale-top-right-intro > p {
+  margin-bottom: 5%;
   color: rgba(133, 83, 51, 0.8);
   font-size: 20px;
 }
 .sale-top-right-intro > h4 {
+  margin-bottom: 5%;
   font-size: 30px;
   margin-top: 5px;
   cursor: pointer;
@@ -88,6 +95,9 @@
 }
 /* 반응형======================= */
 @media screen and (max-width: 900px) {
+  .sale-top-right > button {
+    height: 50px;
+  }
   .sale-top-left > h2 {
     font-size: 28px;
   }

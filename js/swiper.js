@@ -1,5 +1,25 @@
 window.addEventListener("load", function () {
   // 티겟 스와이퍼
+  var besttSwiper = new Swiper(".bestSwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+    slidesPerView: 1.5,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1200: { slidesPerView: 3.5 },
+      800: { slidesPerView: 2 },
+      600: { slidesPerView: 2, spaceBetween: 20 },
+    },
+    on: {
+      loop: true,
+    },
+  });
   var targetSwiper = new Swiper(".targetSwiper", {
     slidesPerView: 1.5,
     spaceBetween: 10,

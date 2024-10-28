@@ -91,9 +91,7 @@
 .pet-icon > img {
   width: 100%;
 }
-.pet-icon-mb {
-  display: none;
-}
+
 .ppang-button {
   position: absolute;
   z-index: 999;
@@ -106,14 +104,21 @@
 .ppang-button > img {
   width: 100%;
 }
-.ppang-button-mb {
-  display: none;
+.swpagination > span {
+  background-color: #855333;
 }
-
 /* 반응형 */
 @media (max-width: 1500px) {
   .enter {
     display: block;
+  }
+}
+@media (max-width: 1300px) {
+  .ppang-button {
+    width: 22%;
+  }
+  .pet-icon {
+    width: 22%;
   }
 }
 @media (max-width: 1200px) {
@@ -139,6 +144,12 @@
   .enter3 {
     display: block;
   }
+  .ppang-button {
+    width: 30%;
+  }
+  .pet-icon {
+    width: 30%;
+  }
 }
 @media (max-width: 800px) {
   .swipersection-title > h4 {
@@ -151,33 +162,6 @@
   }
   .enter2 {
     display: block;
-  }
-}
-
-@media (max-width: 600px) {
-  .ppang-button {
-    display: none;
-  }
-  .ppang-button-mb {
-    display: block;
-    margin: 0 auto;
-    width: 60%;
-    padding-bottom: 10%;
-  }
-  .ppang-button-mb > img {
-    width: 100%;
-  }
-  .pet-icon {
-    display: none;
-  }
-  .pet-icon-mb {
-    display: block;
-    margin: 0 auto;
-    width: 60%;
-    padding-bottom: 10%;
-  }
-  .pet-icon-mb > img {
-    width: 100%;
   }
 }
 
@@ -203,5 +187,11 @@
   }
   .swipersection-title .more-btn img {
     width: 5px;
+  }
+  .ppang-button {
+    width: 40%;
+  }
+  .pet-icon {
+    width: 40%;
   }
 }
