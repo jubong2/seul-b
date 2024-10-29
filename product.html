@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <!-- 구글 애널리틱스  -->
-    <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -13,20 +11,19 @@
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-MXNJDZBK");
+      })(window, document, "script", "dataLayer", "GTM-KH9KMPWS");
     </script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>슬기로운 빵생활 상세페이지</title>
+    <title>슬기로운 빵생활 B안</title>
     <!-- SEO적용 -->
     <meta name="description" content="전국 빵순이 빵순이들 모여라!! 전국 빵맛집을 한번에! " />
     <meta name="keywords" content="빵맛집, 전국빵맛집, 빵지순례, 빵투어, 빵맛있는곳, 디저트, 디저트추천, 빵추천, 베이커리, 빵택배 , 빵택배배송" />
     <meta name="author" content="슬기로운빵생활" />
     <meta property="og:title" content="슬기로운빵생활" />
     <meta property="og:description" content="전국 빵집 모음! " />
-    <meta property="og:image" content="https://seulppang-t7we.vercel.app/images/logo.png" />
-    <meta property="og:url" content="https://seulppang-t7we.vercel.app/" />
+    <meta property="og:image" content="https://seul-b.vercel.app/images/logo.png" />
+    <meta property="og:url" content="seul-b.vercel.app" />
     <meta property="og:site_name" content="seulppang[슬기로운빵생활]" />
     <meta property="og:type" content="website" />
     <!-- 파비콘 적용 -->
@@ -62,19 +59,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- css 연결 -->
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/productPage.css">
     <!-- js -->
 
     <script src="js/loginpage.js"></script>
+    <script src="js/subpage.js"></script>
     <script src="js/detailpage.js"></script>
     <script src="js/best5.js"></script>
     <script src="js/community.js"></script>
     <script src="js/header.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/minibanner.js"></script>
+    <script src="js/time-sale.js"></script>
     <script src="js/productPage.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53RQ74E4K0"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MTMFNC1B5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -82,7 +82,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-53RQ74E4K0");
+      gtag("config", "G-0MTMFNC1B5");
     </script>
   </head>
   <body>
@@ -97,8 +97,8 @@
 
         <li>
           <span>최근 본 물품</span>
-          <a href="#" class="good-recent">
-            <img src="images/cake-1.jpg" alt="케이크" />
+          <a href="productPage.html" class="good-recent">
+            <img src="images/party1.jpg" alt="케이크" />
           </a>
         </li>
         <li>
@@ -156,8 +156,7 @@
         </ul>
       </div>
     </div>
-    <div class="wrap">
-      <!-- 헤더 -->
+    <div class="warp">
       <section class="header">
         <div class="header-top">
           <div class="header-logo">
@@ -184,7 +183,7 @@
             </div>
           </div>
           <div class="header-mb-bar">
-            <img src="images/mb-header.png" alt="햄버거바" />
+            <a href="#"><img src="images/mb-header.png" alt="햄버거바" /></a>
           </div>
         </div>
         <div class="header-bottom">
@@ -245,7 +244,6 @@
           </ul>
         </div>
       </section>
-      <!-- 상품 영역 -->
       <div class="product">
         <div class="product-inner">
           <!-- 상품 위에 담기 부분 -->
@@ -462,195 +460,194 @@
         </section>
       </div>
     </div>
-  </body>
-  <script>
-    $(document).ready(function () {
-      // 더보기/접기 버튼 기능
-      $("#btnMore").on("click", function () {
-        $("#detail").toggleClass("show"); // 클래스 토글
-        if ($("#detail").hasClass("show")) {
-          $(this).text("접기"); // 버튼 텍스트 변경
-        } else {
-          $(this).text("더보기"); // 기본 텍스트로 복귀
-        }
-      });
+    <script>
+      $(document).ready(function () {
+        // 더보기/접기 버튼 기능
+        $("#btnMore").on("click", function () {
+          $("#detail").toggleClass("show"); // 클래스 토글
+          if ($("#detail").hasClass("show")) {
+            $(this).text("접기"); // 버튼 텍스트 변경
+          } else {
+            $(this).text("더보기"); // 기본 텍스트로 복귀
+          }
+        });
 
-      const $modal = $("#imageModal");
-      const $btnMore = $("#btnMore2");
-      const $spanClose = $(".close");
+        const $modal = $("#imageModal");
+        const $btnMore = $("#btnMore2");
+        const $spanClose = $(".close");
 
-      // "더보기" 버튼 클릭 시 모달 열기
-      $btnMore.on("click", function () {
-        $modal.show(); // 모달 열기
-      });
+        // "더보기" 버튼 클릭 시 모달 열기
+        $btnMore.on("click", function () {
+          $modal.show(); // 모달 열기
+        });
 
-      // 닫기 버튼 클릭 시 모달 닫기
-      $spanClose.on("click", function () {
-        $modal.hide(); // 모달 닫기
-      });
+        // 닫기 버튼 클릭 시 모달 닫기
+        $spanClose.on("click", function () {
+          $modal.hide(); // 모달 닫기
+        });
 
-      // 모달 외부 클릭 시 모달 닫기
-      $(window).on("click", function (event) {
-        if ($(event.target).is($modal)) {
-          $modal.hide(); // 모달 외부 클릭 시 닫기
-        }
-      });
-      // ================================================
-      const reviewsPerPage = 5; // 한 페이지에 표시할 리뷰 수
-      let currentPage = 1;
-      const reviews = [
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "abs123",
-          date: "2024.10.26",
-          content: "케이크가 너무 귀여워서 감동했어요! 포장도 꼼꼼했고 시트가 부드러워서 맛있게 먹었어요~",
-          img: "images/review-img/review-1.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "qqq002",
-          date: "2024.10.26",
-          content: "예쁘고 정성도 많이 들어가 있어서 만족합니다.",
-          img: "images/review-img/review-2.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "soheemom12",
-          date: "2024.10.24",
-          content: "생각보다 퀄리티 좋고 맛까지 있어요..! 급할 때 강추",
-          img: "images/review-img/review-3.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "ddang99",
-          date: "2024.10.21",
-          content: "남편 생일이라 구매해 봤는데 시트가 너무 축축?한 느낌이라 좀 아쉬워요",
-          img: "images/review-img/review-4.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "lovin89",
-          date: "2024.10.21",
-          content: "완전 촉촉하고 맛있어서 무슨 날이 아니더라도 사먹고 싶네요 ^^",
-          img: "images/review-img/review-5.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "asd445",
-          date: "2024.10.21",
-          content: "같이 오는 초도 넘 귀엽고 배송도 빨라서 좋았어용",
-          img: "images/review-img/review-6.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "ksdfjd33",
-          date: "2024.10.19",
-          content: "생일파티때 필요해서 급하게 시켰는데 너무 만족해요",
-          img: "images/review-img/review-7.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "hio9337",
-          date: "2024.10.19",
-          content: "맛도 좋고 퀄리티도 좋은데 사이즈가 넘 작아서 아숩 ㅠㅜ",
-          img: "images/review-img/review-8.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "gfg5532",
-          date: "2024.10.15",
-          content: "급하게 시킨거라 맛은 기대 안 했는데 너무 맛있네요..!",
-          img: "images/review-img/review-9.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "seung9090",
-          date: "2024.10.15",
-          content: "배송 꼼꼼하고 빨라서 좋아요~~",
-          img: "images/review-img/review-10.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "leeom980",
-          date: "2024.10.21",
-          content: "같이 오는 초도 넘 귀엽고 배송도 빨라서 좋았어용",
-          img: "images/review-img/review-11.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "g8g8g8",
-          date: "2024.10.19",
-          content: "생일파티때 필요해서 급하게 시켰는데 너무 만족해요",
-          img: "images/review-img/review-12.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "sola653",
-          date: "2024.10.19",
-          content: "맛도 좋고 퀄리티도 좋은데 사이즈가 넘 작아서 아숩 ㅠㅜ",
-          img: "images/review-img/review-13.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "jfgh056",
-          date: "2024.10.15",
-          content: "급하게 시킨거라 맛은 기대 안 했는데 너무 맛있네요..!",
-          img: "images/review-img/review-14.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "fdjgf44",
-          date: "2024.10.15",
-          content: "배송 꼼꼼하고 빨라서 좋아요~~",
-          img: "images/review-img/review-15.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "tioy44568",
-          date: "2024.10.21",
-          content: "같이 오는 초도 넘 귀엽고 배송도 빨라서 좋았어용",
-          img: "images/review-img/review-6.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "fkgjdu745",
-          date: "2024.10.19",
-          content: "생일파티때 필요해서 급하게 시켰는데 너무 만족해요",
-          img: "images/review-img/review-7.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "njhu8975",
-          date: "2024.10.19",
-          content: "맛도 좋고 퀄리티도 좋은데 사이즈가 넘 작아서 아숩 ㅠㅜ",
-          img: "images/review-img/review-8.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 2",
-          author: "dkfjsi2",
-          date: "2024.10.15",
-          content: "급하게 시킨거라 맛은 기대 안 했는데 너무 맛있네요..!",
-          img: "images/review-img/review-9.JPG",
-        },
-        {
-          title: "미니 파스텔 호호케이크 - size 1",
-          author: "klyho00",
-          date: "2024.10.15",
-          content: "배송 꼼꼼하고 빨라서 좋아요~~",
-          img: "images/review-img/review-10.JPG",
-        },
+        // 모달 외부 클릭 시 모달 닫기
+        $(window).on("click", function (event) {
+          if ($(event.target).is($modal)) {
+            $modal.hide(); // 모달 외부 클릭 시 닫기
+          }
+        });
+        // ================================================
+        const reviewsPerPage = 5; // 한 페이지에 표시할 리뷰 수
+        let currentPage = 1;
+        const reviews = [
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "abs123",
+            date: "2024.10.26",
+            content: "케이크가 너무 귀여워서 감동했어요! 포장도 꼼꼼했고 시트가 부드러워서 맛있게 먹었어요~",
+            img: "images/review-img/review-1.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "qqq002",
+            date: "2024.10.26",
+            content: "예쁘고 정성도 많이 들어가 있어서 만족합니다.",
+            img: "images/review-img/review-2.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "soheemom12",
+            date: "2024.10.24",
+            content: "생각보다 퀄리티 좋고 맛까지 있어요..! 급할 때 강추",
+            img: "images/review-img/review-3.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "ddang99",
+            date: "2024.10.21",
+            content: "남편 생일이라 구매해 봤는데 시트가 너무 축축?한 느낌이라 좀 아쉬워요",
+            img: "images/review-img/review-4.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "lovin89",
+            date: "2024.10.21",
+            content: "완전 촉촉하고 맛있어서 무슨 날이 아니더라도 사먹고 싶네요 ^^",
+            img: "images/review-img/review-5.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "asd445",
+            date: "2024.10.21",
+            content: "같이 오는 초도 넘 귀엽고 배송도 빨라서 좋았어용",
+            img: "images/review-img/review-6.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "ksdfjd33",
+            date: "2024.10.19",
+            content: "생일파티때 필요해서 급하게 시켰는데 너무 만족해요",
+            img: "images/review-img/review-7.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "hio9337",
+            date: "2024.10.19",
+            content: "맛도 좋고 퀄리티도 좋은데 사이즈가 넘 작아서 아숩 ㅠㅜ",
+            img: "images/review-img/review-8.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "gfg5532",
+            date: "2024.10.15",
+            content: "급하게 시킨거라 맛은 기대 안 했는데 너무 맛있네요..!",
+            img: "images/review-img/review-9.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "seung9090",
+            date: "2024.10.15",
+            content: "배송 꼼꼼하고 빨라서 좋아요~~",
+            img: "images/review-img/review-10.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "leeom980",
+            date: "2024.10.21",
+            content: "같이 오는 초도 넘 귀엽고 배송도 빨라서 좋았어용",
+            img: "images/review-img/review-11.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "g8g8g8",
+            date: "2024.10.19",
+            content: "생일파티때 필요해서 급하게 시켰는데 너무 만족해요",
+            img: "images/review-img/review-12.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "sola653",
+            date: "2024.10.19",
+            content: "맛도 좋고 퀄리티도 좋은데 사이즈가 넘 작아서 아숩 ㅠㅜ",
+            img: "images/review-img/review-13.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "jfgh056",
+            date: "2024.10.15",
+            content: "급하게 시킨거라 맛은 기대 안 했는데 너무 맛있네요..!",
+            img: "images/review-img/review-14.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "fdjgf44",
+            date: "2024.10.15",
+            content: "배송 꼼꼼하고 빨라서 좋아요~~",
+            img: "images/review-img/review-15.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "tioy44568",
+            date: "2024.10.21",
+            content: "같이 오는 초도 넘 귀엽고 배송도 빨라서 좋았어용",
+            img: "images/review-img/review-6.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "fkgjdu745",
+            date: "2024.10.19",
+            content: "생일파티때 필요해서 급하게 시켰는데 너무 만족해요",
+            img: "images/review-img/review-7.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "njhu8975",
+            date: "2024.10.19",
+            content: "맛도 좋고 퀄리티도 좋은데 사이즈가 넘 작아서 아숩 ㅠㅜ",
+            img: "images/review-img/review-8.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 2",
+            author: "dkfjsi2",
+            date: "2024.10.15",
+            content: "급하게 시킨거라 맛은 기대 안 했는데 너무 맛있네요..!",
+            img: "images/review-img/review-9.JPG",
+          },
+          {
+            title: "미니 파스텔 호호케이크 - size 1",
+            author: "klyho00",
+            date: "2024.10.15",
+            content: "배송 꼼꼼하고 빨라서 좋아요~~",
+            img: "images/review-img/review-10.JPG",
+          },
 
-        // 여기에 추가 리뷰를 계속 나열...
-      ];
+          // 여기에 추가 리뷰를 계속 나열...
+        ];
 
-      function renderReviews(page) {
-        $("#reviewsContainer").empty(); // 기존 리뷰 초기화
-        const start = (page - 1) * reviewsPerPage;
-        const end = Math.min(start + reviewsPerPage, reviews.length);
+        function renderReviews(page) {
+          $("#reviewsContainer").empty(); // 기존 리뷰 초기화
+          const start = (page - 1) * reviewsPerPage;
+          const end = Math.min(start + reviewsPerPage, reviews.length);
 
-        for (let i = start; i < end; i++) {
-          const review = reviews[i];
-          $("#reviewsContainer").append(`
+          for (let i = start; i < end; i++) {
+            const review = reviews[i];
+            $("#reviewsContainer").append(`
                 <div class="review-item">
                     <h3>${review.title}</h3>
                     <p class="review-author">작성자 : ${review.author}</p>
@@ -659,34 +656,34 @@
                     <img src="${review.img}" alt="후기 이미지 ${i + 1}" />
                 </div>
             `);
+          }
+
+          // 페이지네이션 버튼 활성화 상태 업데이트
+          $("#prevBtn").prop("disabled", page === 1);
+          $("#nextBtn").prop("disabled", end === reviews.length);
+          $("#pageInfo").text(`${page} / ${Math.ceil(reviews.length / reviewsPerPage)}`);
         }
 
-        // 페이지네이션 버튼 활성화 상태 업데이트
-        $("#prevBtn").prop("disabled", page === 1);
-        $("#nextBtn").prop("disabled", end === reviews.length);
-        $("#pageInfo").text(`${page} / ${Math.ceil(reviews.length / reviewsPerPage)}`);
-      }
+        // 이전 버튼 클릭
+        $("#prevBtn").click(function () {
+          if (currentPage > 1) {
+            currentPage--;
+            renderReviews(currentPage);
+          }
+        });
 
-      // 이전 버튼 클릭
-      $("#prevBtn").click(function () {
-        if (currentPage > 1) {
-          currentPage--;
-          renderReviews(currentPage);
-        }
-      });
+        // 다음 버튼 클릭
+        $("#nextBtn").click(function () {
+          if (currentPage < Math.ceil(reviews.length / reviewsPerPage)) {
+            currentPage++;
+            renderReviews(currentPage);
+          }
+        });
 
-      // 다음 버튼 클릭
-      $("#nextBtn").click(function () {
-        if (currentPage < Math.ceil(reviews.length / reviewsPerPage)) {
-          currentPage++;
-          renderReviews(currentPage);
-        }
-      });
-
-      // 초기 리뷰 렌더링
-      renderReviews(currentPage);
-      // ===============================================================
-      AOS.init();
+        // 초기 리뷰 렌더링
+        renderReviews(currentPage);
+        // ===============================================================
+        AOS.init();
         const cartbtn = document.querySelectorAll("#add-to-cart");
 
         cartbtn.forEach((button) => {
@@ -694,6 +691,24 @@
             alert("장바구니에 담겼습니다.");
           });
         });
-    });
-  </script>
+      });
+    </script>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // const targetNameElement = document.querySelector(".taget-name"); // 클래스명 수정
+        const logintext = document.querySelector(".logintext");
+
+        // 로컬 스토리지에서 username 가져오기
+        const username = localStorage.getItem("username");
+        console.log(username);
+
+        if (username) {
+          // targetNameElement.textContent = username;
+          logintext.textContent = "로그아웃";
+        } else {
+          logintext.textContent = "로그인";
+        }
+      });
+    </script> -->
+  </body>
 </html>
