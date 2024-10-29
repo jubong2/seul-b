@@ -11,9 +11,6 @@
 @import url("loginpage.css");
 @import url("subpage.css");
 @import url("detailpage.css");
-@import url("productPage.css");
-@import url("fixmenu.css");
-@import url("signupPage.css");
 
 * {
   margin: 0;
@@ -73,9 +70,9 @@ img {
     margin-bottom: 200px;
   }
 
-  /* .community {
+  .community {
     margin-bottom: 200px;
-  } */
+  }
 }
 @media (max-width: 800px) {
   .banner {
@@ -108,7 +105,7 @@ img {
     margin-bottom: 150px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   .banner {
     margin-bottom: 80px;
   }
@@ -119,9 +116,7 @@ img {
   .time-sale {
     margin-bottom: 80px;
   }
-  .time-sale-inner {
-    width: 08%;
-  }
+
   .knotted-banner {
     margin-bottom: 80px;
   }
@@ -132,9 +127,6 @@ img {
   .target-swiper {
     margin-bottom: 80px;
   }
-  .target-warp {
-    width: 80%;
-  }
 
   .pet-swiper {
     margin-bottom: 80px;
@@ -142,8 +134,5 @@ img {
 
   .community {
     margin-bottom: 80px;
-  }
-  .subpage-inner {
-    width: 80%;
   }
 }

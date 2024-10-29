@@ -24,15 +24,14 @@
   display: flex;
   gap: 100px;
   font-size: 30px;
-  font-weight: 600;
-  cursor: pointer;
+  font-weight: bold;
 }
 .subpage-button-kind {
   padding-bottom: 1%;
   position: relative; /* 자식 요소가 절대 위치를 가질 수 있도록 설정 */
   overflow: hidden;
   width: calc(100% / 4);
-  color: #ebebeb;
+  color: #fff;
   aspect-ratio: 1;
   margin-bottom: 10%;
   border-radius: 200px;
@@ -44,60 +43,30 @@
 
 .subpage-button-kind:nth-child(1) {
   background: url("../images/menu1.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
-  transition: background-size 0.3s ease;
-  -moz-transition: background-size 0.3s ease;
-  -web-kit-transition: background-size 0.3s ease;
-}
-.subpage-button-kind:nth-child(1):hover {
-  background-size: 120%;
 }
 
 .subpage-button-kind:nth-child(2) {
   background: url("../images/menu2.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
-  transition: background-size 0.3s ease;
-  -moz-transition: background-size 0.3s ease;
-  -web-kit-transition: background-size 0.3s ease;
-}
-.subpage-button-kind:nth-child(2):hover {
-  background-size: 120%;
 }
 .subpage-button-kind:nth-child(3) {
   background: url("../images/menu3.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
-  transition: background-size 0.3s ease;
-  -moz-transition: background-size 0.3s ease;
-  -web-kit-transition: background-size 0.3s ease;
-}
-.subpage-button-kind:nth-child(3):hover {
-  background-size: 120%;
 }
 .subpage-button-kind:nth-child(4) {
   background: url("../images/menu4.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
-  transition: background-size 0.3s ease;
-  -moz-transition: background-size 0.3s ease;
-  -web-kit-transition: background-size 0.3s ease;
-}
-.subpage-button-kind:nth-child(4):hover {
-  background-size: 120%;
 }
 .subpage-button-kind:nth-child(5) {
   overflow: hidden;
   background: url("../images/menu5.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
-  transition: background-size 0.3s ease;
-  -moz-transition: background-size 0.3s ease;
-  -web-kit-transition: background-size 0.3s ease;
-}
-.subpage-button-kind:nth-child(5):hover {
-  background-size: 120%;
 }
 .subpage-button-kind::after {
   content: ""; /* 가상 요소에 내용 추가 */
@@ -106,7 +75,7 @@
   top: 65%; /* h3 아래에 위치 */
   transition: all 1s; /* 가상 요소의 트랜지션 */
   width: 0; /* 기본 너비 */
-  border-bottom: #ebebeb solid 2px; /* 경계 스타일 */
+  border-bottom: #fff solid 3px; /* 경계 스타일 */
   opacity: 0; /* 기본 상태에서 가리기 */
   transform: translate(-50%, -65%); /* 중앙 정렬을 위한 변환 */
 }
@@ -168,7 +137,7 @@
   position: relative;
   width: 20%;
   display: block;
-  height: 55px;
+  height: 80px;
   /* padding: 5% 10%; */
   margin: 0 auto;
   font-size: 20px;
@@ -184,7 +153,7 @@
   left: 50%;
   transform: translate(-50%, -70%);
   width: 40%;
-  height: 3px;
+  height: 5px;
   background-color: saddlebrown;
 }
 .subbt:hover {
@@ -197,7 +166,8 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  gap: 25px;
+  gap: 20px;
+  width: 80%;
   text-align: center;
   /* display: flex; */
   /* display: inline-block; */
@@ -207,14 +177,17 @@
   font-size: 18px;
 }
 
+.page-link {
+  width: 10%;
+}
 .page-link.active-page {
   width: 30px;
   line-height: 30px;
   color: white;
-  background-color: #a07153;
+  background-color: saddlebrown;
   border-radius: 50%;
+  font-weight: bold;
 }
-
 /* ==========반응형 */
 
 @media (max-width: 1000px) {
@@ -309,27 +282,7 @@
   .subbt::after {
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
-    height: 2px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .subpage-pagination {
-    width: 100%;
-    font-size: 13px;
-  }
-  .page-link.active-page {
-    width: 20px;
-    line-height: 20px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .subpage-pagination {
-    width: 90%;
-    font-size: 11px;
-  }
-  .page-link.active-page {
-    width: 20px;
-    line-height: 20px;
+    width: 10%;
+    height: 3px;
   }
 }
