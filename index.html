@@ -69,6 +69,7 @@
     <script src="js/header.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/minibanner.js"></script>
+    <script src="js/time-sale.js"></script>
     <!-- Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MTMFNC1B5"></script>
@@ -1120,6 +1121,13 @@
     <script>
       $(document).ready(function () {
         AOS.init();
+        const cartbtn = document.querySelectorAll(".sale-top-right > button");
+
+        cartbtn.forEach((button) => {
+          button.addEventListener("click", function () {
+            alert("장바구니에 담겼습니다.");
+          });
+        });
         function updateTimer() {
           const targetDate = new Date("2024-11-09T11:00:00"); // 11월 9일 오전 11시 목표 시간
           const now = new Date(); // 현재 시간
