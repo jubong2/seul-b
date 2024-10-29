@@ -731,7 +731,7 @@
                 <h2>식사빵 일일특가</h2>
                 <h3>단 24시간 한정 타임 특가 !</h3>
                 <div class="sale-count">
-                  <p>⏰<span id="timer">00:00:00</span></p>
+                  <p>⏰<span id="timer1">00:00:00</span></p>
                 </div>
               </div>
               <div class="sale-top-right">
@@ -749,7 +749,7 @@
                 <h2>최저가 도전</h2>
                 <h3>놓치면 안되는 기회 !</h3>
                 <div class="sale-count">
-                  <p>⏰<span id="timer">00:00:00</span></p>
+                  <p>⏰<span id="timer2">00:00:00</span></p>
                 </div>
               </div>
               <div class="sale-top-right">
@@ -1128,16 +1128,16 @@
             alert("장바구니에 담겼습니다.");
           });
         });
-        function updateTimer() {
-          const targetDate = new Date("2024-11-09T11:00:00"); // 11월 9일 오전 11시 목표 시간
+        // ======================================================================
+        function updateTimer(targetId, targetDate) {
           const now = new Date(); // 현재 시간
           const timeDiff = targetDate - now; // 남은 시간 계산 (밀리초 단위)
 
           if (timeDiff <= 0) {
             // 시간이 다 되었을 때 타이머를 멈추고 메시지를 변경
-            $("#timer").text("00:00:00");
-            clearInterval(timerInterval);
-            alert("팝업 종료 시간이 지났습니다.");
+            $(`#${targetId}`).text("00:00:00");
+            clearInterval(timerIntervals[targetId]); // 해당 타이머만 멈춤
+            alert(`${targetId} 타이머 종료 시간이 지났습니다.`);
             return;
           }
 
@@ -1145,14 +1145,18 @@
           const minutes = String(Math.floor((timeDiff / (1000 * 60)) % 60)).padStart(2, "0");
           const seconds = String(Math.floor((timeDiff / 1000) % 60)).padStart(2, "0");
 
-          $("#timer").text(`${hours}:${minutes}:${seconds}`);
+          $(`#${targetId}`).text(`${hours}:${minutes}:${seconds}`);
         }
 
-        // 1초마다 타이머 업데이트
-        const timerInterval = setInterval(updateTimer, 1000);
+        // 각 타이머에 대해 별도로 설정
+        const timerIntervals = {
+          timer1: setInterval(() => updateTimer("timer1", new Date("2024-11-09T11:00:00")), 1000),
+          timer2: setInterval(() => updateTimer("timer2", new Date("2024-11-10T12:00:00")), 1000),
+        };
 
-        // 페이지 로드 시 바로 타이머 표시
-        updateTimer();
+        // 페이지 로드 시 즉시 타이머 표시
+        updateTimer("timer1", new Date("2024-11-09T11:00:00"));
+        updateTimer("timer2", new Date("2024-11-10T12:00:00"));
         // ===========================================
       });
     </script>
