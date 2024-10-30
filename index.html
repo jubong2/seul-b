@@ -71,6 +71,7 @@
     <script src="js/minibanner.js"></script>
     <script src="js/time-sale.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/popupModal.js"></script>
     <!-- Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MTMFNC1B5"></script>
@@ -85,6 +86,18 @@
     </script>
   </head>
   <body>
+    <!-- 팝업창 -->
+    <div class="popup-overlay" id="popupOverlay" style="display: none">
+      <div class="popup">
+        <button class="close-btn" id="closePopup">X</button>
+        <img src="images/popupModal.png" alt="팝업 일정표 이미지" class="popup-image" />
+        <div class="checkbox-container">
+          <input type="checkbox" id="dontShowCheckbox" />
+          <label for="dontShowCheckbox">오늘 하루 보지 않기</label>
+        </div>
+      </div>
+    </div>
+    <!-- =========================================================== -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH9KMPWS" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) --><!-- 헤더 -->
@@ -761,7 +774,7 @@
               </div>
               <div class="sale-top-right">
                 <img src="images/sale-top.JPG" alt="" />
-                <button>담기</button>
+                <button>장바구니 담기</button>
                 <div class="sale-top-right-intro">
                   <p>오늘 단 하루 초특가! 든든하고 고소한 식사빵의 정석</p>
                   <h4>[프렌떼] 장발장빵(호밀 깜빠뉴) 3종(택1)</h4>
@@ -779,11 +792,11 @@
               </div>
               <div class="sale-top-right">
                 <img src="images/sale-bottom.JPG" alt="" />
-                <button>담기</button>
+                <button>장바구니 담기</button>
                 <div class="sale-top-right-intro">
                   <p>가장 핫한 도넛 ! 올드페리를 집에서 즐겨보세요 ~</p>
                   <h4>[올드페리] 시그니처 4종 세트</h4>
-                  <h5><b>50%</b> 19,000원~ <span>9,500원</span></h5>
+                  <h5><b>50%</b> 9,500원~ <span>19,000원</span></h5>
                 </div>
               </div>
             </div>
