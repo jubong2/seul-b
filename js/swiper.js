@@ -20,7 +20,12 @@ window.addEventListener("load", function () {
       loop: true,
     },
   });
+  // 티겟 스와이퍼
   var targetSwiper = new Swiper(".targetSwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
     slidesPerView: 1.5,
     spaceBetween: 10,
     autoplay: {
@@ -32,6 +37,10 @@ window.addEventListener("load", function () {
     breakpoints: { 1200: { slidesPerView: 3.5 }, 700: { slidesPerView: 3 } },
   });
   var petgetSwiper = new Swiper(".petSwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
     slidesPerView: 1.5,
     spaceBetween: 10,
     autoplay: {

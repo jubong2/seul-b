@@ -116,7 +116,9 @@ img {
   .best5 {
     margin-bottom: 60px;
   }
-
+  .best5-inner {
+    width: 80%;
+  }
   .time-sale {
     margin-bottom: 80px;
   }
