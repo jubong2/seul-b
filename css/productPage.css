@@ -110,6 +110,7 @@
   display: flex;
   text-align: right;
   margin: 20px 0;
+  border-bottom: 2px solid #a07153;
 }
 
 .quantity-selector button {
@@ -130,6 +131,7 @@
   font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 12px;
 }
 #quantity {
   color: #885332;
@@ -253,14 +255,14 @@
 
 /* 더보기 버튼 스타일 */
 #btnMore2 {
-  background-color: #a07153;
-  color: #fff;
+  width: calc(100% / 11);
+  background: none;
   border: none;
-  font-size: 15px;
+}
+#btnMore2 > img {
   cursor: pointer;
   border-radius: 5px;
-  width: 30px;
-  height: 30px;
+  width: 100%;
 }
 .review-header {
   /* text-align: center; */
@@ -287,16 +289,17 @@
 .review-item > h4 {
   width: 100%;
   white-space: pre-line;
+  margin-bottom: 15px;
 }
 .review-item h3 {
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   font-size: 16px;
   color: rgba(133, 83, 51, 0.8);
 }
 .review-item p {
   color: rgba(133, 83, 51, 0.8);
 }
-.review-item > .review-date {
+.review-item > .review-date{
   margin-bottom: 15px;
 }
 .review-item img {
@@ -380,10 +383,12 @@
   /* background-color: #fff; */
   margin-top: 10px;
 }
-.qnas tr,
-.qnas thead {
+.qnas tr {
   border-bottom: 1px solid rgba(207, 170, 146, 0.8);
-  border-top: 1px solid rgba(207, 170, 146, 0.8);
+}
+.qnas thead > tr {
+  border-top: 1px solid #885332;
+  border-bottom: 1px solid #885332;
 }
 
 .qnas th,
@@ -421,10 +426,10 @@
   font-weight: 900;
   color: rgba(126, 70, 35, 0.8);
 }
-.qnas td:hover{
+.qnas td:hover {
   text-decoration: underline;
-  text-decoration-color: #FF8D29;
-  color: #FF8D29;
+  text-decoration-color: #ff8d29;
+  color: #ff8d29;
 }
 .qna-pagination li.active,
 .qna-pagination li:hover,
@@ -495,10 +500,13 @@
     display: none;
   }
   .review-imgs > img {
-    width: calc(100% / 9);
+    width: calc(100% / 10);
     margin-right: 5px;
     border-radius: 5px;
     object-fit: cover;
+  }
+  #btnMore2 {
+    width: calc(100% / 10);
   }
   .qna-inner p {
     font-size: 14px;
@@ -572,10 +580,13 @@
     display: none;
   }
   .review-imgs > img {
-    width: calc(100% / 6);
+    width: calc(100% / 7);
     margin-right: 5px;
     border-radius: 5px;
     object-fit: cover;
+  }
+  #btnMore2 {
+    width: calc(100% / 7);
   }
   .qna-inner p {
     font-size: 12px;
@@ -592,6 +603,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .product-inner {
+    width: 80%;
+  }
   .product {
     padding-top: 80px;
   }
@@ -659,10 +673,13 @@
     display: none;
   }
   .review-imgs > img {
-    width: calc(100% / 5);
+    width: calc(100% / 6);
     margin-right: 5px;
     border-radius: 5px;
     object-fit: cover;
+  }
+  #btnMore2 {
+    width: calc(100% / 6);
   }
   .qnas th,
   .qnas td {
@@ -765,7 +782,7 @@
   }
   .qnas th,
   .qnas td {
-    padding: 8px 10px;
+    padding: 8px;
     font-size: 12px;
   }
 }
