@@ -111,7 +111,7 @@
   overflow: hidden;
   width: 80px;
   right: 0;
-  top: 0%;
+  bottom: 0%;
   display: flex;
   gap: 15%;
   margin: 10px 20px;
