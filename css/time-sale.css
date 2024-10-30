@@ -39,8 +39,8 @@
 }
 .sale-top-right > button {
   width: 100%;
-  height: 70px;
-  font-size: 20px;
+  height: 60px;
+  font-size: 22px;
   background-color: rgba(133, 83, 51, 0.8);
   border: none;
   border-radius: 5px;
@@ -141,6 +141,42 @@
   }
   .sale-top-left > h3 {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .sale-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .sale-top-left > h2 {
+    font-size: 28px;
+  }
+  .sale-top-left > h3 {
+    font-size: 18px;
+  }
+  .sale-count {
+    margin-bottom: 20px;
+  }
+  .sale-count p {
+    font-size: 25px;
+  }
+  .sale-count p span {
+    font-size: 28px;
+  }
+  .sale-top-right {
+    width: 100%;
+  }
+  .sale-top-right-intro > p {
+    font-size: 15px;
+  }
+  .sale-top-right-intro > h4 {
+    font-size: 23px;
+  }
+  .sale-top-right-intro > h5 {
+    font-size: 22px;
+  }
+  .sale-top-right-intro > h5 > span {
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 450px) {
