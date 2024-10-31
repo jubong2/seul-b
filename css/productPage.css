@@ -487,12 +487,6 @@
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 1200px) {
-  .cart-btn > button{
-    margin-top: 20px;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .product {
     padding-top: 180px;
