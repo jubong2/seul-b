@@ -151,7 +151,7 @@
               <li><a href="#">인기빵</a></li>
             </ul>
           </li>
-          <li class="mb-header-navi-kind"><a href="#">COMMUNITY</a></li>
+          <li class="mb-header-navi-kind"><a href="index.html#community">COMMUNITY</a></li>
           <li class="mb-header-navi-kind"><a href="#">C/S</a></li>
         </ul>
       </div>
@@ -237,7 +237,7 @@
               </div>
             </li>
             <li>
-              <a href="#" class="header-navi-title"><h3>COMMUNITY</h3></a>
+              <a href="index.html#community" class="header-navi-title"><h3>COMMUNITY</h3></a>
             </li>
             <li>
               <a href="#" class="header-navi-title"><h3>C/S</h3></a>
@@ -311,6 +311,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const loginButton = document.querySelector(".loginpagiBtn");
+        const findId = document.querySelector(".remember-check > a"); // 요소를 정확하게 선택
 
         loginButton.addEventListener("click", function (event) {
           event.preventDefault();
@@ -330,6 +331,9 @@
           } else {
             alert("로그인 정보가 일치하지 않습니다."); // 로그인 실패 메시지
           }
+        });
+        findId.addEventListener("click", function () {
+          alert("회원가입을 하신적이 있으십니까?");
         });
       });
     </script>
