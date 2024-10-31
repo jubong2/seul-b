@@ -46,6 +46,7 @@
 .best5-button > a {
   width: calc(100% / 4);
   line-height: 2;
+  font-family: "Tenada";
   font-size: 40px;
 }
 
@@ -153,6 +154,7 @@
 }
 .product-text > a > p:nth-child(3) {
   font-size: 30px;
+  font-family: "Gapyeong Wave", sans-serif;
 }
 /* best content 랭킹 번호 */
 .best5slide:nth-child(1)::after {

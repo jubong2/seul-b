@@ -191,6 +191,9 @@
   font-size: 25px; /* 호버 시에만 해당 버튼의 크기 증가 */
 }
 
+.active-filter {
+  font-size: 25px; /* 호버 시에만 해당 버튼의 크기 증가 */
+}
 /* =========페이지 네이션 */
 
 .subpage-pagination {
@@ -242,11 +245,14 @@
   .subbt:hover {
     font-size: 20px;
   }
+  .active-filter {
+    font-size: 205px; /* 호버 시에만 해당 버튼의 크기 증가 */
+  }
   .subpage-button-kind {
     margin-bottom: 15%;
   }
   .subpage-pagination {
-    width: 100%;
+    width: 80%;
   }
 
   .subpage-pagination {
@@ -254,10 +260,22 @@
   }
 
   .page-link {
-    width: 15%;
+    width: 30px;
+  }
+
+  .page-link:first-of-type {
+    width: 100px;
+  }
+  .page-link:last-of-type {
+    width: 100px;
   }
 }
 
+@media (max-width: 650px) {
+  .subpage-pagination {
+    width: 100%;
+  }
+}
 @media (max-width: 600px) {
   .gift-product,
   .vegan-product,
@@ -306,6 +324,9 @@
   .subbt:hover {
     font-size: 18px;
   }
+  .active-filter {
+    font-size: 18px; /* 호버 시에만 해당 버튼의 크기 증가 */
+  }
   .subbt::after {
     top: 50%;
     transform: translate(-50%, -50%);
@@ -315,21 +336,19 @@
 }
 @media screen and (max-width: 400px) {
   .subpage-pagination {
-    width: 100%;
     font-size: 13px;
   }
   .page-link.active-page {
-    width: 20px;
+    width: 22px;
     line-height: 20px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   .subpage-pagination {
-    width: 90%;
     font-size: 11px;
   }
   .page-link.active-page {
-    width: 20px;
+    width: 25px;
     line-height: 20px;
   }
 }
